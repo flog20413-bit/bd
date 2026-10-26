@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Моя база даних</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        font-family: "Segoe UI", sans-serif;
+        color: #f1eff5;
+        background: #111116;
+        font-synthesis: none;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        min-width: 320px;
+        min-height: 100vh;
+        margin: 0;
+        padding: 64px 28px;
+        background:
+          radial-gradient(ellipse at 50% 0, rgb(124 94 190 / 11%), transparent 480px),
+          #111116;
+      }
+
+      .database {
+        width: min(850px, 100%);
+        margin: 0 auto;
+      }
+
+      .page-header {
+        margin-bottom: 30px;
+      }
+
+      h1,
+      h2,
+      p {
+        margin: 0;
+      }
+
+      h1 {
+        font-size: clamp(28px, 5vw, 38px);
+        font-weight: 650;
+        letter-spacing: -1.5px;
+      }
+
+      .page-header p {
+        margin-top: 8px;
+        color: #9894a2;
+        font-size: 14px;
+      }
+
+      .catalog,
+      .overview {
+        overflow: hidden;
+        border: 1px solid #302e38;
+        border-radius: 12px;
+        background: #19191f;
+      }
+
+      .table-scroll {
+        overflow-x: auto;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+      }
+
+      .catalog table {
+        min-width: 650px;
+      }
+
+      th {
+        height: 45px;
+        padding: 0 17px;
+        background: #211f28;
+        color: #aaa5b4;
+        font-size: 10px;
+        font-weight: 650;
+        letter-spacing: 0.07em;
+      }
+
+      td {
+        height: 53px;
+        padding: 0 17px;
+        border-top: 1px solid #292830;
+        color: #dfdce6;
+        font-size: 13px;
+      }
+
+      tbody tr:first-child td {
+        border-top: 0;
+      }
+
+      .catalog td:first-child {
+        width: 54px;
+        color: #9894a2;
+      }
+
+      .catalog td:nth-child(2) {
+        font-weight: 550;
+      }
+
+      .catalog td:nth-child(4) {
+        color: #aaa5b4;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .rating {
+        color: #e9c371;
+        font-weight: 650;
+      }
+
+      @media (max-width: 540px) {
+        body {
+          padding: 36px 16px;
+        }
+
+        .page-header {
+          margin-bottom: 23px;
+        }
+
+        th,
+        td {
+          padding-right: 13px;
+          padding-left: 13px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="database">
+      <header class="page-header">
+        <h1>Моя база даних</h1>
+        <p>Мій каталог фільмів • серіалів • ігор</p>
+      </header>
+
+      <section class="catalog" aria-label="Мій каталог фільмів, серіалів та ігор">
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">НАЗВА</th>
+                <th scope="col">ЖАНР</th>
+                <th scope="col">РІК ВИПУСКУ</th>
+                <th scope="col">МІЙ РЕЙТИНГ / 10</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Інтерстеллар</td>
+                <td>Фантастика</td>
+                <td>2014</td>
+                <td><span class="rating">10</span></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Гаррі Поттер і філософський камінь</td>
+                <td>Фентезі</td>
+                <td>2001</td>
+                <td><span class="rating">9</span></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Гра престолів</td>
+                <td>Фентезі</td>
+                <td>2011</td>
+                <td><span class="rating">9</span></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Шрек</td>
+                <td>Комедія</td>
+                <td>2001</td>
+                <td><span class="rating">8</span></td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Людина-павук: Навколо всесвіту</td>
+                <td>Анімація</td>
+                <td>2018</td>
+                <td><span class="rating">10</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </main>
+  </body>
+</html>
